@@ -53,6 +53,7 @@
     <Compile Include="Models\DepositTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\CommandLineServiceTests.cs" />
+    <Compile Include="ViewModels\AppViewModelTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
