@@ -16,7 +16,8 @@ namespace Haushaltsbuch.Services {
                     //TODO
                     break;
                 case "einzahlung":
-                    bookingType = new Deposit(args);
+                    bookingType = new Deposit();
+                    bookingType.SetArguments(args);
                     break;
                 case "auszahlung":
                     //TODO

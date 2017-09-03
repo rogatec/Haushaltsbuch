@@ -2,8 +2,8 @@
 
 namespace Haushaltsbuch.Models {
     public interface IBookingType {
-        DateTime Date { get; set; }
+        DateTime Date { get; }
 
-        DateTime GetBookingDate(string dateArg);
+        void SetArguments(string[] args);
     }
 }

@@ -6,8 +6,8 @@ namespace Haushaltsbuch.Tests.Services {
     [TestFixture]
     public class CommandLineServiceTests {
         [Test]
-        public void GetBookingTypeObject_ReturnsObjectWithGivenDate() {
-            var args = new string[] {"einzahlung", "12.12.2012", "c", "d"};
+        public void GetBookingTypeObject_ReturnsObjectWithGivenDateAndAmount() {
+            var args = new[] {"einzahlung", "12.12.2012", "1"};
 
             var sut = CommandLineService.GetBookingTypeObject(args);
 
@@ -15,8 +15,8 @@ namespace Haushaltsbuch.Tests.Services {
         }
 
         [Test]
-        public void GetBookingTypeObject_ReturnsObjectWithCurrentDate() {
-            var args = new string[] {"einzahlung", ""};
+        public void GetBookingTypeObject_ReturnsObjectWithDate() {
+            var args = new[] {"einzahlung"};
 
             var sut = CommandLineService.GetBookingTypeObject(args);
 
@@ -35,7 +35,7 @@ namespace Haushaltsbuch.Tests.Services {
 
         [Test]
         public void GetBookingTypeObject_ThrowsArgumentExceptionIfWrongFirstArg() {
-            var args = new string[] {"a"};
+            var args = new[] {"a"};
 
             var ex = Assert.Throws<ArgumentException>(() => CommandLineService.GetBookingTypeObject(args));
 
