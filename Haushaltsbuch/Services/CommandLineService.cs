@@ -13,14 +13,16 @@ namespace Haushaltsbuch.Services {
             // first argument is the booking type
             switch (args[0]) {
                 case "uebersicht":
-                    //TODO
+                    //TODO implementation
                     break;
                 case "einzahlung":
                     bookingType = new Deposit();
                     bookingType.SetArguments(args);
+                    //TODO save deposit
+                    //TODO write to json file
                     break;
                 case "auszahlung":
-                    //TODO
+                    //TODO implementation
                     break;
                 default:
                     throw new ArgumentException(
